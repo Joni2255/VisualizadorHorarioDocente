@@ -65,15 +65,16 @@ WSGI_APPLICATION = 'Horario.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-import pymysql
-pymysql.install_as_MySQLdb()
+
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Horario',
-        'USER': 'root',
-        'PASSWORD': '',
+        'ENGINE ': 'django.db.backends.mysql',
+		'NAME' : 'railway',
+		'USER' : 'root',
+		'PASSWORD' : 'ukd6ncK2A7T8dwawJqbS',
+		'HOST' : 'containers-us-west-168.railway.app', #si tienes otra dirección host debes remplazar esta
+		'PORT' : '5485' #si lo dejas vacío tomara el puerto por default
     }
 }
 
