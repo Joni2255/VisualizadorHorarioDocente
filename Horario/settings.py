@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-90o^dxhua%jf24h39vulp91#5fvxt#)&)j4@6&l$wt15mmgsuk
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+DATABASE_URL = ["postgres://vhorariodocente_user:qVbuddHimf1q4RKEYmJugH54a8vbjPhW@dpg-ceh28gpa6gdoe9o88os0-a.oregon-postgres.render.com/vhorariodocente"]
 
 # Application definition
 
@@ -66,15 +66,15 @@ WSGI_APPLICATION = 'Horario.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-import pymysql
-pymysql.install_as_MySQLdb()
+
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Horario',
-        'USER': 'root',
-        'PASSWORD': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vhorariodocente',
+        'USER': 'vhorariodocente_user',
+        'PASSWORD': 'qVbuddHimf1q4RKEYmJugH54a8vbjPhW',
+        'PORT': '5432',
     }
 }
 
