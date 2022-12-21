@@ -17,8 +17,7 @@ SECRET_KEY = 'django-insecure-90o^dxhua%jf24h39vulp91#5fvxt#)&)j4@6&l$wt15mmgsuk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-DATABASE_URL = ["postgres://vhorariodocente_user:qVbuddHimf1q4RKEYmJugH54a8vbjPhW@dpg-ceh28gpa6gdoe9o88os0-a.oregon-postgres.render.com/vhorariodocente"]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -74,6 +73,7 @@ DATABASES = {
         'NAME': 'vhorariodocente',
         'USER': 'vhorariodocente_user',
         'PASSWORD': 'qVbuddHimf1q4RKEYmJugH54a8vbjPhW',
+        'HOST': 'dpg-ceh28gpa6gdoe9o88os0-a',
         'PORT': '5432',
     }
 }
@@ -115,7 +115,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [STATIC_DIR]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
