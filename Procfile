@@ -1,1 +1,1 @@
-web: gunicorn Horario.wsgi --log-file -
+web: gunicorn HorarioLocalDef.wsgi --log-file -
