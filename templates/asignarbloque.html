@@ -15,14 +15,14 @@
 
 <body class="container mt-3">
   <header>
-    <div class="alert alert-info display-2 text-center fst-italic" role="alert">
+    <div class="alert alert-primary display-3 text-center" role="alert">
         Agregar un nuevo bloque
     </div>
   </header>
   <main>
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_d }}
+            {{ form.as_p }}
             <a class="btn btn-danger" href="/" role="button">Cancelar</a>
             <button type="submit" class="btn btn-primary float-end">Crear bloque</button>
         </form>
